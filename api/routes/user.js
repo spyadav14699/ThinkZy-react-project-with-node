@@ -8,6 +8,8 @@ const bycript = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 
+
+
 //   adding user sighnup using bycrypt to encrypt the password 
 router.post('/sighnup', (req, res, next) => {
     bycript.hash(req.body.password, 10, (err, hash) => {
@@ -86,8 +88,6 @@ router.post('/login', (req, res, next) => {
     });
 });
 //   get all users
-
-
 
             
 
