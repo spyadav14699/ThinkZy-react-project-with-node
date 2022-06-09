@@ -22,6 +22,7 @@
   "homepage": "https://github.com/spyadav14699/ThinkZy-react-project-with-node#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "mongoose": "^6.3.6",
     "nodemon": "^2.0.16"
   }
 }

@@ -5,6 +5,20 @@ const studentRouter = require('./api/routes/student');
 
 const facultyRouter = require('./api/routes/faculty');
 
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://spyadavg:Surya@123@cluster0.gi9rs.mongodb.net/?retryWrites=true&w=majority')
+
+mongoose.connect.on('error', (err) => {
+    console.log('Error in connecting to database', err);
+});
+
+
+mongoose.connection.on('connected', () => {
+    console.log('connected to mongodb');
+});
+
+
 app.use('/faculty', facultyRouter);
 
 app.use('/student', studentRouter);
