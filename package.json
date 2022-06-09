@@ -1,0 +1,27 @@
+{
+  "name": "thinkzy",
+  "version": "1.0.0",
+  "description": "rest api",
+  "main": "nodemon server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spyadav14699/ThinkZy-react-project-with-node.git"
+  },
+  "keywords": [
+    "restfull",
+    "api"
+  ],
+  "author": "Surya Pratap Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spyadav14699/ThinkZy-react-project-with-node/issues"
+  },
+  "homepage": "https://github.com/spyadav14699/ThinkZy-react-project-with-node#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
