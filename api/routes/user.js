@@ -47,55 +47,45 @@ router.post('/login', (req, res, next) => {
     .exec()
     .then(user => {
         if (user.length < 1) {
-
             return res.status(401).json({
-                message: 'Authentication failed'
+                message: 'Authentication failed : user not exist' // if user not exist
             });
         }
-
         bycript.compare(req.body.password, user[0].password, (err, result) => {
-            if(!result) {
+            if (err) {
                 return res.status(401).json({
-                    message: 'Authentication matching failed'
+                    message: 'Authentication failed : password not match' // if password not match
                 });
-
             }
-            if(result) {
+            if (result) {
                 const token = jwt.sign({
                     username: user[0].username,
                     usertype: user[0].usertype,
-                    email: user[0].email,
-                    password: user[0].password
-
-
+                    email: user[0].email
                 },
-                'secret',
+                'secret key',  // secret key for jwt
+
                 {
-                    expiresIn: '24h'
 
+                    expiresIn: '1h' // token expire in 1 hour
                 }
-
                 );
-                return res.status(200).json({
+                res.status(200).json({
                     username: user[0].username,
                     usertype: user[0].usertype,
                     email: user[0].email,
-                    password: user[0].password,
                     token: token
                 });
-            }
-        }
-        );
+            }});
     }
     ).catch(err => {
         console.log(err);
         res.status(500).json({
             error: err
         });
-    }
-    );
-}
-);
+    });
+});
+//   get all users
 
 
 
