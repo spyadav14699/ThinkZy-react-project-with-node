@@ -5,6 +5,7 @@ const studentRouter = require('./api/routes/student');
 
 const facultyRouter = require('./api/routes/faculty');
 
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://spyadavg:JB0LbAYuPFpGBvGr@cluster0.gi9rs.mongodb.net/?retryWrites=true&w=majority');
@@ -20,6 +21,10 @@ mongoose.connection.on('connected', (connected) => {
 mongoose.connection.on('error', (err) => {
     console.log('Error in connecting to database');
 });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 
 app.use('/faculty', facultyRouter);
 
