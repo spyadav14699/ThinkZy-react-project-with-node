@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 const mongoose = require('mongoose');
-const Student = require('../model/student');
+const Product = require('../model/Product');
 const checkAuth = require('../middlerware/check.auth');
 
  // adding checkAuth middleware to check if user is logged in or not
@@ -12,10 +12,10 @@ const checkAuth = require('../middlerware/check.auth');
 
  router.get('/', checkAuth,(req, res, next) => {
 
-Student.find()
+Product.find()
     .exec().then(result => {
         res.status(200).json({
-           Students: result
+           Product: result
         });
     }
     ).catch(err => {
@@ -26,7 +26,7 @@ Student.find()
 
 });
 router.get('/:id', (req, res, next) => {
-    Student.findById(req.params.id)
+    Product.findById(req.params.id)
     .then(result => {
         res.status(200).json(result);
     }
@@ -40,19 +40,21 @@ router.get('/:id', (req, res, next) => {
     
 
 router.post('/', (req, res, next) => {
-   const student = new Student({
+   const product = new Product({
          _id: new mongoose.Types.ObjectId(),
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password,
-            age: req.body.age
+        title: req.body.title,
+        price: req.body.price,
+        description: req.body.description,
+        category: req.body.category,
+        image: req.body.image
+
 
 });
 
-    student.save().then(result => {
+    product.save().then(result => {
         console.log(result);
         res.status(201).json({
-            msg: 'student created successfully'
+            msg: 'Product created successfully'
         });
     }
     ).catch(err => {
@@ -65,10 +67,10 @@ router.post('/', (req, res, next) => {
 
 //   delete request 
 router.delete('/:id', (req, res, next) => {
-    Student.remove({_id: req.params.id})
+    Product.remove({_id: req.params.id})
     .then(result => {
         res.status(200).json({
-            msg: 'student deleted successfully'
+            msg: 'Product deleted successfully'
         });
     }
     ).catch(err => {
@@ -81,17 +83,18 @@ router.delete('/:id', (req, res, next) => {
 //  update data to the data base 
 
  router.put('/:id', (req, res, next) => {
-     Student.findByIdAndUpdate(req.params.id, {
+     Product.findByIdAndUpdate(req.params.id, {
          $set: {
-                name: req.body.name,
-                email: req.body.email,
-                password: req.body.password,
-                age: req.body.age
+                title: req.body.title,
+                price: req.body.price,
+                description: req.body.description,
+                category: req.body.category,
+                image: req.body.image
             }
         }
         ).then(result => {
             res.status(200).json({
-                msg: 'student updated successfully'
+                msg: 'Product updated successfully'
             });
         }
         ).catch(err => {
