@@ -12,10 +12,7 @@ const checkAuth = require('../middlerware/check.auth');
 
  router.get('/', checkAuth,(req, res, next) => {
 
-    Student.find()
-   
-
-    Student.find()
+Student.find()
     .exec().then(result => {
         res.status(200).json({
            Students: result
