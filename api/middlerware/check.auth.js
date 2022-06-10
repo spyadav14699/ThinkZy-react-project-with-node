@@ -6,8 +6,17 @@ const jwt = require('jsonwebtoken');
          const token = req.headers.authorization.split(" ")[1];
          const decoded = jwt.verify(token, 'secret key');
         
-        //console.log(decoded);
-         next();
+        console.log(decoded);
+
+       if(decoded.usertype === 'admin'){
+           next();
+       }
+       else{
+              return res.status(404).json({
+                message: 'Authentication failed not admin'
+              });
+         }
+
     }
     catch (error)
     {
