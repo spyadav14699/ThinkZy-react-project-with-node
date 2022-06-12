@@ -2,7 +2,7 @@
   "name": "thinkzy",
   "version": "1.0.0",
   "description": "rest api",
-  "main": "node server.js",
+  "main": "nodemon server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
