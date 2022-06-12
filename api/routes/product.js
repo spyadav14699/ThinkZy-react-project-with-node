@@ -10,7 +10,7 @@ const checkAuth = require('../middlerware/check.auth');
  
 
 
- router.get('/', checkAuth,(req, res, next) => {
+ router.get('/',(req, res, next) => {
 
 Product.find()
     .exec().then(result => {
