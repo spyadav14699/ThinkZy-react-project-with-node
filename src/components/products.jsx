@@ -118,7 +118,7 @@ const ShowProducts = () => {
 <div className="card-body">
 <h5 className="card-title mb-0">{el.title.substring(0,12)}</h5>
 <p className="card-text">${el.price}</p>
-<a href="#" className="btn btn-primary">Buy now</a>
+  <Navlink to={'/products'} className="btn btn-primary">Buy now </Navlink>
 </div>
 </div>
     </div>
@@ -155,11 +155,4 @@ const ShowProducts = () => {
     )
 }
 
-
-
-          
-  
-
-   
-
-export default Products
+export default Products;
