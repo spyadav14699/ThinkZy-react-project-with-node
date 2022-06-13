@@ -1,4 +1,5 @@
 import React from 'react'
+import Products from './products'
 
 const Home = () => {
   return (
@@ -6,14 +7,20 @@ const Home = () => {
 
 <div className="card bg-dark text-white border-0">
    
-  <img src="\webimages\girlimg.jpg" className="card-img" alt="background" height="550px/>
-  <div className="card-img-overlay">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p className="card-text">Last updated 3 mins ago</p>
+  <img src="\webimages\girlimg.jpg" className="card-img" alt="background" height="450px"/>
+
+  <div className="card-img-overlay d-flex flex-column justify-content-around">
+
+    <div className="container">
+    <h5 className="card-title display-3 mb-0 fw-bolder">Fashion Time</h5>
+    <p className="card-text">CHECKOUT THE TRENDING ITEMS</p>
+
+
+    </div>
+   
   </div>
 </div>
-
+  <Products/>
     </div>
   )
 }
