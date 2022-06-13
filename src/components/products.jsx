@@ -43,7 +43,10 @@ const ShowProducts = () => {
   return (
     <div className="button">
     <button className="btn btn-outline-dark">All</button>
-    <button className="btn btn-outline-dark">Men's clothing</button>
+    <button className="btn btn-outline-dark me-2">Men's clothing</button>
+    <button className="btn btn-outline-dark me-2">Women's clothing</button>
+    <button className="btn btn-outline-dark me-2">Electronics</button>
+    <button className="btn btn-outline-dark me-2">Makeup</button>
    </div>
   )
 }
