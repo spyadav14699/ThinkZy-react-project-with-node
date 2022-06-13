@@ -21,6 +21,7 @@ useEffect(() => {
             setFilter(await res.json());
             setLoading(false);
             console.log(data);
+            //data fetched
         
         }
         return () => {
