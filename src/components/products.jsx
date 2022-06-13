@@ -55,6 +55,14 @@ const filterProduct = (catogery) => {
     setFilter(data.filter(product => product.category === catogery));
 
 }
+const sortBylowToHigh = () => {
+    setFilter(data.sort((a, b) => a.price - b.price));
+}
+const sortByHighToLow = () => {
+    setFilter(data.sort((a, b) => b.price - a.price));
+}
+
+
 
 
 
@@ -87,6 +95,16 @@ const ShowProducts = () => {
             filterProduct("electronics");
         }
     }>Electronics</button>
+    <button className="btn btn-outline-dark me-2" onClick={
+        () => {
+            sortBylowToHigh()
+        }
+    }>Low Price</button>
+    <button className="btn btn-outline-dark me-2" onClick={
+        () => {
+            sortByHighToLow()
+        }
+    }>Hight Price</button>
    </div>
     {filter.map((el) => {
 
