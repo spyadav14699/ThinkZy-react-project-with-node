@@ -1,10 +1,4 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 # Guidline 
 
@@ -15,7 +9,8 @@ In back-end I used bycriptjs and jwt.
 
 With the help of the same if user is admin so he can update the data
 
-For more details
+ I used mongodb atlas for the same.
+
 
 
 
@@ -27,57 +22,65 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+# How to use backend 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+In user type some details are required you have to meke the post request in
+ localhost:5000/user/sighnup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After sighn up
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You have to again make the post request on 
+Localhost:5000/user/login
+After the you will get the token for details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If the user is admin he can meke the any request method
 
-### `npm run eject`
+Go to postman make the get request on URL localhost:5000/product
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In auth section choose the barrertoken option and past the url there
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then you will get the same data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Also you can update and delete the data as well
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Due to Lake of time and some errors I got so I was not able to impiment these things.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+But I will update it soon with the full functionality.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# From end Guidline.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I have also diployed the project I about section you can check it
+.
 
-### Advanced Configuration
+But for now. 
+I used fakestoreapi data for the details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For now if you are running it in your local machine you can use localhost:5000/product
+At the place of api.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+It's a fully functional web app with the clean UI
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# What is was not able to do in this project.
+
+
+I was using redux for the handling cart page data.
+But the reason was my system is very slow I tried to do so but it make my system hang again and again.
+
+
+
+
+There is nothing any task that I was not able to do but I faced many issues at the same time
+
+
+
+
+# Note: Please check it carefully if you have any queries please reach out to me I spent many hours for the same. 
