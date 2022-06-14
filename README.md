@@ -6,6 +6,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+# Guidline 
+
+First clone the repo. Then another terminal you can start the server with the help of 
+Nodemon server.js
+
+In back-end I used bycriptjs and jwt.
+
+With the help of the same if user is admin so he can update the data
+
+For more details
+
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
