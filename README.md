@@ -119,3 +119,6 @@ Font-awesome
 
 
 # Note: Please check it carefully if you have any queries please reach out to me I spent many hours for the same. 
+
+
+Thanks
